@@ -1,0 +1,16 @@
+.image {
+
+    box-shadow: -20px 20px 0px #FFE0B3;
+    border-radius: 8px;
+}
+
+
+.small_p {
+    color: #FF9900;
+}
+
+.shop_now {
+    background-color: #FF9900;
+    color: black;
+    border: none;
+}

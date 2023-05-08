@@ -10,7 +10,7 @@ function MyCard({ item }) {
   const { handleCount } = useContext(AuthContext);
   
   // distructuring data from item=====================================
-  const { img, name, price, seller, ratings } = item;
+  const { img, name, price, seller, ratings, shipping } = item;
 
 
 
@@ -29,7 +29,7 @@ function MyCard({ item }) {
           <p className="card-paragraph small my-0 muted">Manufacturer: {seller}</p>
           <p className="card-paragraph small my-0 muted">Rating: {ratings}</p>
         </Card.Text>
-        <Button className='card_btn' onClick={()=>{handleCount(price)}} variant="primary"><BsCart /> Add to Cart</Button>
+        <Button className='card_btn' onClick={()=>{handleCount(price,item,shipping)}} variant="primary"><BsCart /> Add to Cart</Button>
       </Card.Body>
     </Card>
   );

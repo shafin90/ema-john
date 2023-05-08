@@ -11,6 +11,7 @@ import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
 import Shop from './components/Shop/Shop';
 import Provider from './components/Provider/Provider';
+import ReviewOrder from './components/ReviewOrder/ReviewOrder';
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>
+      },
+      {
+        path:'/review_order',
+        element:<ReviewOrder></ReviewOrder>
       }
     ]
 

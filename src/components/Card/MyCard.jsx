@@ -1,9 +1,24 @@
 import { Card, Button } from 'react-bootstrap';
+import { BsCart } from 'react-icons/bs';
 import './MyCard.css';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/Provider';
 
 function MyCard({ item }) {
-  console.log(item);
+
+  // Context API =========================================
+  const { handleCount } = useContext(AuthContext);
+  
+  // distructuring data from item=====================================
   const { img, name, price, seller, ratings } = item;
+
+
+
+
+
+
+
+
   return (
     <Card className='card'>
       <Card.Img variant="top" alt="product-image" src={img} />
@@ -14,7 +29,7 @@ function MyCard({ item }) {
           <p className="card-paragraph small my-0 muted">Manufacturer: {seller}</p>
           <p className="card-paragraph small my-0 muted">Rating: {ratings}</p>
         </Card.Text>
-        <Button className='card_btn' variant="primary">Add to Cart</Button>
+        <Button className='card_btn' onClick={()=>{handleCount(price)}} variant="primary"><BsCart /> Add to Cart</Button>
       </Card.Body>
     </Card>
   );

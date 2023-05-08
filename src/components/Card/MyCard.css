@@ -1,0 +1,9 @@
+.card{
+    height: 500px;
+}
+.card_btn{
+    width: 100%;
+    background-color: #FFE0B3;
+    color: black;
+    border: none;
+}

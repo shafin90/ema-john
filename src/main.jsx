@@ -9,6 +9,8 @@ import {
 import './index.css'
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
+import Shop from './components/Shop/Shop';
+import Provider from './components/Provider/Provider';
 
 
 
@@ -16,18 +18,24 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: "/shop",
+        element: <Shop></Shop>
       }
     ]
-   
+
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
